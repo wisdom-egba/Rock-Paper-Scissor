@@ -68,3 +68,9 @@
   span{
     color: rgb(247, 72, 72);
   }
+
+#players{
+    text-align: center;
+    font-size: 28px;
+    margin: 5px 0 10px;
+  }
