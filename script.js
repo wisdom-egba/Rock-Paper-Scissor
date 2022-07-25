@@ -67,15 +67,29 @@ const playGame = ()=>{
 // console.log(m)
 // console.log(k)
 
+
 const playerScoreDisplay = document.getElementById("player-score")
-const displayResult = document.getElementById("result")
+const displayResult = document.getElementById("players")
 const hand = document.getElementById("hands")
 const endgameButtonDiv = document.getElementById('endGameButton')
+const resultDiv = document.getElementById("result")
 
+        //ShowResult
  const showResult = (score, totalScore, playerChoice, compChoice)=>{
   playerScoreDisplay.innerHTML = score
   displayResult.innerText = `User ${totalScore['playerScore']} - ${totalScore['computerScore']} Comp` 
   hand.innerText = `${playerChoice}  ${" "} vs   ${compChoice}`
+  if(score == 1){
+    resultDiv.innerText = `You win`
+    resultDiv.style.color = 'green'
+  }else if(score == -1){
+    resultDiv.innerText = `You lose`
+    resultDiv.style.color = 'red'
+  }else{
+    resultDiv.innerText = `Tie`
+    resultDiv.style.color = 'yellow'
+  }
+
  }
 
  const endGameBtn = (totalScore, score)=>{
